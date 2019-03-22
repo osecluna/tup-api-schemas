@@ -1,135 +1,135 @@
 {
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://secluna.com/sfmc-validation",
-	"properties": {
-		"label": {
-			"description": "Used to identify the integration and it's webhook",
-			"type": "string",
-			"minLength": 1,
-			"maxLength": 120
-		},
-		"hubId": {
-			"description": "ID of the Amplience Dynamic Content hub",
-			"type": "string",
-			"minLength": 1,
-			"maxLength": 64
-		},
-		"dc-credentials": {
-			"description": "An Amplience Dynamic Content API client that has access to the hub",
-			"type": "object",
-			"properties": {
-				"id": {
-					"description": "API client ID",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 64
-				},
-				"secret": {
-					"description": "API client secret",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 64
-				}
-			},
-			"required": [
-				"id",
-				"secret"
-			]
-		},
-		"rendering": {
-			"description": "Used by the Content Rendering Service to generate the HTML",
-			"type": "object",
-			"properties": {
-				"domain": {
-					"description": "VSE domain",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 1000
-				},
-				"htmlTemplate": {
-					"description": "Handlebars template name, excluding the file extension",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 256,
-					"pattern": "^([^.]+)$"
-				}
-			},
-			"required": [
-				"domain",
-				"htmlTemplate"
-			]
-		},
-		"sfmc-credentials": {
-			"description": "Auth credentials from the installed package on the connected SFMC account",
-			"type": "object",
-			"properties": {
-				"authDomain": {
-					"description": "Tenant-specific authentication base URI",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 1000,
-					"pattern": "^https://"
-				},
-				"id": {
-					"description": "API Integration client ID",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 64
-				},
-				"secret": {
-					"description": "API Integration client secret",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 64
-				}
-			},
-			"required": [
-				"id",
-				"secret",
-				"authDomain"
-			]
-		},
-		"contentAssets": {
-			"description": "SFMC content asset configuration",
-			"type":"object",
-			"properties": {
-				"contentTypeSchemas": {
-					"description": "Only create assets for content items that use these content type schemas",
-					"type": "array",
-					"minLength": 1,
-					"maxLength": 20,
-					"properties": {
-						"id": {
-							"description": "Content type schema ID",
-							"type": "string",
-							"minLength": 1,
-							"maxLength": 500,
-                			"pattern": "^https?://"
-						}
-					},
-					"required": [
-						"id"
-					]
-				},
-				"folder": {
-					"description": "Name of top-level folder in content builder to store all DC content",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 100
-				}
-			},
-			"required": [
-				"contentTypeSchemas",
-				"folder"
-			]
-		}
-	},
-	"required": [
-		"label",
-		"hubId",
-		"dc-credentials",
-		"rendering",
-		"sfmc-credentials",
-		"contentAssets"
-	]
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://secluna.com/sfmc-validation",
+    "properties": {
+        "label": {
+            "description": "Used to identify the integration and it's webhook",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+        },
+        "hubId": {
+            "description": "ID of the Amplience Dynamic Content hub",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+        },
+        "dc-credentials": {
+            "description": "An Amplience Dynamic Content API client that has access to the hub",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "API client ID",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64
+                },
+                "secret": {
+                    "description": "API client secret",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64
+                }
+            },
+            "required": [
+                "id",
+                "secret"
+            ]
+        },
+        "rendering": {
+            "description": "Used by the Content Rendering Service to generate the HTML",
+            "type": "object",
+            "properties": {
+                "domain": {
+                    "description": "VSE domain",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                },
+                "htmlTemplate": {
+                    "description": "Handlebars template name, excluding the file extension",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256,
+                    "pattern": "^([^.]+)$"
+                }
+            },
+            "required": [
+                "domain",
+                "htmlTemplate"
+            ]
+        },
+        "sfmc-credentials": {
+            "description": "Auth credentials from the installed package on the connected SFMC account",
+            "type": "object",
+            "properties": {
+                "authDomain": {
+                    "description": "Tenant-specific authentication base URI",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000,
+                    "pattern": "^https://"
+                },
+                "id": {
+                    "description": "API Integration client ID",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64
+                },
+                "secret": {
+                    "description": "API Integration client secret",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64
+                }
+            },
+            "required": [
+                "id",
+                "secret",
+                "authDomain"
+            ]
+        },
+        "contentAssets": {
+            "description": "SFMC content asset configuration",
+            "type":"object",
+            "properties": {
+                "contentTypeSchemas": {
+                    "description": "Only create assets for content items that use these content type schemas",
+                    "type": "array",
+                    "minLength": 1,
+                    "maxLength": 20,
+                    "properties": {
+                        "id": {
+                            "description": "Content type schema ID",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 500,
+                            "pattern": "^https?://"
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ]
+                },
+                "folder": {
+                    "description": "Name of top-level folder in content builder to store all DC content",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                }
+            },
+            "required": [
+                "contentTypeSchemas",
+                "folder"
+            ]
+        }
+    },
+    "required": [
+        "label",
+        "hubId",
+        "dc-credentials",
+        "rendering",
+        "sfmc-credentials",
+        "contentAssets"
+    ]
 }
