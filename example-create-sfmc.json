@@ -1,0 +1,24 @@
+{
+	"label": "My integration label",
+    "hubId": "my-dc-hub-id",
+	"dc-credentials": {
+		"id": "my-dc-client-id",
+		"secret": "my-dc-secret"
+	},
+	"rendering": {
+		"vseDomain": "eid2j6ilgn7j1p0og4j7d5d38.staging.bigcontent.io",
+        "htmlTemplate": "sfmc-template-chooser"
+		
+	},
+	"sfmc-credentials": {
+        "authDomain": "https://my-subdomain.auth.marketingcloudapis.com",
+		"id": "my-sfmc-client-id",
+		"secret": "my-sfmc-secret"
+	},
+    "contentAssets": {
+        "topLevelFolder": "my-sfmc-folder",
+        "contentTypeSchemas": [{
+            "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+        }]
+    }
+}
