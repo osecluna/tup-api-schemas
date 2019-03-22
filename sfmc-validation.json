@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "http://secluna.com/sfmc-validation",
+    "id": "https://raw.githubusercontent.com/osecluna/tup-api-schemas/master/sfmc-validation.json",
     "properties": {
         "label": {
             "description": "Used to identify the integration and it's webhook",
