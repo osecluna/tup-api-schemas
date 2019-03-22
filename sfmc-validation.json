@@ -40,7 +40,7 @@
             "description": "Used by the Content Rendering Service to generate the HTML",
             "type": "object",
             "properties": {
-                "domain": {
+                "vseDomain": {
                     "description": "VSE domain",
                     "type": "string",
                     "minLength": 1,
@@ -55,7 +55,7 @@
                 }
             },
             "required": [
-                "domain",
+                "vseDomain",
                 "htmlTemplate"
             ]
         },
@@ -93,6 +93,12 @@
             "description": "SFMC content asset configuration",
             "type":"object",
             "properties": {
+                "topLevelFolder": {
+                    "description": "Name of top-level folder in content builder to store all DC content",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                },
                 "contentTypeSchemas": {
                     "description": "Only create assets for content items that use these content type schemas",
                     "type": "array",
@@ -110,17 +116,11 @@
                     "required": [
                         "id"
                     ]
-                },
-                "folder": {
-                    "description": "Name of top-level folder in content builder to store all DC content",
-                    "type": "string",
-                    "minLength": 1,
-                    "maxLength": 100
                 }
             },
             "required": [
                 "contentTypeSchemas",
-                "folder"
+                "topLevelFolder"
             ]
         }
     },
