@@ -17,8 +17,10 @@
     },
     "contentAssets": {
         "topLevelFolder": "my-sfmc-folder",
-        "contentTypeSchemas": [{
-            "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
-        }]
+        "contentTypeSchemas": [
+            {
+                "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+            }
+        ]
     }
 }
