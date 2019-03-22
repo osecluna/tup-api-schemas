@@ -89,27 +89,12 @@
 				"authDomain"
 			]
 		},
-		"sfmc": {
-			"description": "Configuration related to the connected SFMC account",
-			"type": "object",
-			"properties": {
-				"folder": {
-					"description": "Root-level folder name for storing Amplience DC assets",
-					"type": "string",
-					"minLength": 1,
-					"maxLength": 100
-				}
-			},
-			"required": [
-				"folder"
-			]
-		},
-		"filters": {
-			"description": "Only create assets for content items that match these filters",
+		"contentAssets": {
+			"description": "SFMC content asset configuration",
 			"type":"object",
 			"properties": {
 				"contentTypeSchemas": {
-					"description": "Content type schemas to match",
+					"description": "Only create assets for content items that use these content type schemas",
 					"type": "array",
 					"minLength": 1,
 					"maxLength": 20,
@@ -125,10 +110,17 @@
 					"required": [
 						"id"
 					]
+				},
+				"folder": {
+					"description": "Name of top-level folder in content builder to store all DC content",
+					"type": "string",
+					"minLength": 1,
+					"maxLength": 100
 				}
 			},
 			"required": [
-				"contentTypeSchemas"
+				"contentTypeSchemas",
+				"folder"
 			]
 		}
 	},
@@ -138,7 +130,6 @@
 		"dc-credentials",
 		"rendering",
 		"sfmc-credentials",
-		"sfmc",
-		"filters"
+		"contentAssets"
 	]
 }
