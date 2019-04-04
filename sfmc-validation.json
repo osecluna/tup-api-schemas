@@ -132,6 +132,7 @@
     "required": [
         "label",
         "hubId",
+        "active",
         "dc-credentials",
         "rendering",
         "sfmc-credentials",
