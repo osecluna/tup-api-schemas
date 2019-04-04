@@ -14,6 +14,11 @@
             "minLength": 1,
             "maxLength": 64
         },
+        "active": {
+            "description": "Enable or disable this integration",
+            "type": "boolean",
+            "default": true
+        },
         "dc-credentials": {
             "description": "An Amplience Dynamic Content API client that has access to the hub",
             "type": "object",
@@ -127,6 +132,7 @@
     "required": [
         "label",
         "hubId",
+        "active",
         "dc-credentials",
         "rendering",
         "sfmc-credentials",

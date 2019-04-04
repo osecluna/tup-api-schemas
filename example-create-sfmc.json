@@ -1,6 +1,7 @@
 {
     "label": "My integration label",
     "hubId": "my-dc-hub-id",
+    "active": true,
     "dc-credentials": {
         "id": "my-dc-client-id",
         "secret": "my-dc-secret"
