@@ -108,7 +108,7 @@
                     "description": "Only create assets for content items that use these content type schemas",
                     "type": "array",
                     "minLength": 1,
-                    "maxLength": 20,
+                    "maxLength": 40,
                     "properties": {
                         "id": {
                             "description": "Content type schema ID",
