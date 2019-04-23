@@ -50,18 +50,10 @@
                     "type": "string",
                     "minLength": 1,
                     "maxLength": 1000
-                },
-                "htmlTemplate": {
-                    "description": "Handlebars template name, excluding the file extension",
-                    "type": "string",
-                    "minLength": 1,
-                    "maxLength": 256,
-                    "pattern": "^([^.]+)$"
                 }
             },
             "required": [
-                "vseDomain",
-                "htmlTemplate"
+                "vseDomain"
             ]
         },
         "sfmc-credentials": {
@@ -116,10 +108,18 @@
                             "minLength": 1,
                             "maxLength": 500,
                             "pattern": "^https?://"
+                        },
+                        "htmlTemplate": {
+                            "description": "Handlebars template name, excluding the file extension",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^([^.]+)$"
                         }
                     },
                     "required": [
-                        "id"
+                        "id",
+                        "htmlTemplate"
                     ]
                 }
             },

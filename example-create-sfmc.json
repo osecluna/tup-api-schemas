@@ -7,8 +7,7 @@
         "secret": "my-dc-secret"
     },
     "rendering": {
-        "vseDomain": "eid2j6ilgn7j1p0og4j7d5d38.staging.bigcontent.io",
-        "htmlTemplate": "sfmc-template-chooser"
+        "vseDomain": "eid2j6ilgn7j1p0og4j7d5d38.staging.bigcontent.io"
         
     },
     "sfmc-credentials": {
@@ -20,7 +19,8 @@
         "topLevelFolder": "my-sfmc-folder",
         "contentTypeSchemas": [
             {
-                "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+                "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+                "htmlTemplate": "image-email"
             }
         ]
     }
